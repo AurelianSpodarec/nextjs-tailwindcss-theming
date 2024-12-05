@@ -1,7 +1,7 @@
 'use client'
 
-import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react';
+import { useTheme } from 'next-themes'
 
 function ModeToggle() {
   const { setTheme, theme } = useTheme()
@@ -14,8 +14,8 @@ function ModeToggle() {
   if (!mounted) return null;
   return (
     <div>
-      <div className="bg-primary">
-        Selected Theme: {theme}
+      <div>
+        Selected Theme: <span className="text-primary font-bold">{theme}</span>
       </div>
       <div className="flex space-x-4">
         <button type="button" onClick={() => { setTheme('light') }}>
@@ -26,6 +26,9 @@ function ModeToggle() {
         </button>
         <button type="button" onClick={() => { setTheme('pink') }}>
           Pink
+        </button>
+        <button type="button" onClick={() => { setTheme('imperial') }}>
+          Imperial
         </button>
         <button type="button" onClick={() => { setTheme('system') }}>
           System

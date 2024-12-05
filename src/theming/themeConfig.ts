@@ -11,8 +11,14 @@ const themeConfig = {
       colors: {
         primary: {
           DEFAULT: 'var(--primary)'
+        },
+        secondary: {
+          DEFAULT: 'var(--secondary)'
         }
-      }
+      },
+      // border: {
+      //   DEFAULT: 'var(--border-default)'
+      // }
     }
   }
 }
